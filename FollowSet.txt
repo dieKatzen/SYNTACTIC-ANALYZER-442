@@ -1,0 +1,49 @@
+idnestRepeat  >>> {), [, =,  } 
+fParamsTail  >>> {), ,,  } 
+sign  >>> {not, floatNum, intNum, id, +, -,  } 
+aParams  >>> {),  } 
+type  >>> {id,  } 
+arithExpr  >>> {geq, lt, leq, ), ;, neq, ,, eq, gt, ],  } 
+relExprMod  >>> {), ;, ,,  } 
+idnestRepeatFactor  >>> {or, floatNum, intNum, lt, ), *, +, ,, eq, gt, -, /, not, geq, and, leq, id, ;, neq, ],  } 
+idnest  >>> {or, floatNum, intNum, lt, ), *, +, ,, eq, gt, -, ., /, not, geq, and, leq, id, ;, neq, ],  } 
+multOp  >>> {not, floatNum, intNum, id, +, -,  } 
+statementRepeat  >>> {},  } 
+arithExprMod  >>> {geq, lt, leq, ), ;, neq, ,, eq, gt, ],  } 
+varDeclRepeat  >>> {},  } 
+funcDefRepeat  >>> {program,  } 
+aParamsTailRepeat  >>> {),  } 
+indice  >>> {or, floatNum, intNum, lt, ), *, +, ,, eq, gt, -, ., /, not, geq, and, leq, id, ;, neq, [, ], =,  } 
+classDecl  >>> {program, id, float, class, int,  } 
+funcDeclRepeat  >>> { } 
+relOp  >>> {not, floatNum, intNum, id, +, -,  } 
+funcDecl  >>> {id, float, int,  } 
+functionCall  >>> {or, floatNum, intNum, lt, ), *, +, ,, eq, gt, -, ., /, not, geq, and, leq, id, ;, neq, ],  } 
+funcBody  >>> {;,  } 
+funcDef  >>> {program, id, float, int,  } 
+aParamsTail  >>> {), ;, ,,  } 
+funcHeadOptionFactor  >>> {(,  } 
+assignOp  >>> {not, floatNum, intNum, id, +, -,  } 
+funcHeadOption  >>> {(,  } 
+fParams  >>> {),  } 
+statBlock  >>> {else, ;,  } 
+termMod  >>> {or, floatNum, intNum, lt, ), +, ,, eq, gt, -, not, geq, leq, id, ;, neq, ],  } 
+fParamsTailRepeat  >>> {),  } 
+classDeclOption  >>> {{,  } 
+statement  >>> {else, ;, =, },  } 
+expr  >>> {), ;, ,,  } 
+term  >>> {or, floatNum, intNum, lt, ), +, ,, eq, gt, -, not, geq, leq, id, ;, neq, ],  } 
+relExpr  >>> {), ;, ,,  } 
+factor  >>> {or, floatNum, intNum, lt, ), *, +, ,, eq, gt, -, /, not, geq, and, leq, id, ;, neq, ],  } 
+addOp  >>> {not, floatNum, intNum, id, +, -,  } 
+arraySizeRepeat  >>> {), ;, ,,  } 
+arraySize  >>> {), [, ;, ,,  } 
+prog  >>> { } 
+variableFunctionCallFactor  >>> {or, floatNum, intNum, lt, ), *, +, ,, eq, gt, -, /, not, geq, and, leq, id, ;, neq, ],  } 
+variable  >>> {or, floatNum, intNum, lt, ), *, +, ,, eq, gt, -, ., /, not, geq, and, leq, id, ;, neq, ], =,  } 
+indiceRepeat  >>> {or, floatNum, intNum, lt, ), *, +, ,, eq, gt, -, ., /, not, geq, and, leq, id, ;, neq, ], =,  } 
+classDeclOptionRepeat  >>> {{,  } 
+assignStat  >>> {), ;,  } 
+varDecl  >>> {id, float, }, int,  } 
+classDeclRepeat  >>> {program, id, float, int,  } 
+funcHead  >>> {{,  } 

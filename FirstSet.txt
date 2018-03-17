@@ -1,0 +1,49 @@
+idnestRepeat  >>> {id, EPSILON,  } 
+fParamsTail  >>> {,,  } 
+sign  >>> {+, -,  } 
+aParams  >>> {not, floatNum, intNum, id, +, -, EPSILON,  } 
+type  >>> {id, float, int,  } 
+arithExpr  >>> {not, floatNum, intNum, id, +, -,  } 
+relExprMod  >>> {geq, lt, leq, neq, eq, gt, EPSILON,  } 
+idnestRepeatFactor  >>> {., EPSILON,  } 
+idnest  >>> {EPSILON,  } 
+multOp  >>> {and, *, /,  } 
+statementRepeat  >>> {=, EPSILON,  } 
+arithExprMod  >>> {or, +, -, EPSILON,  } 
+varDeclRepeat  >>> {id, float, int, EPSILON,  } 
+funcDefRepeat  >>> {id, float, int, EPSILON,  } 
+aParamsTailRepeat  >>> {,, EPSILON,  } 
+indice  >>> {[,  } 
+classDecl  >>> {class,  } 
+funcDeclRepeat  >>> {id, float, int, EPSILON,  } 
+relOp  >>> {geq, lt, leq, neq, eq, gt,  } 
+funcDecl  >>> {id, float, int,  } 
+functionCall  >>> {(,  } 
+funcBody  >>> {{,  } 
+funcDef  >>> {id, float, int,  } 
+aParamsTail  >>> {,,  } 
+funcHeadOptionFactor  >>> {id,  } 
+assignOp  >>> {=,  } 
+funcHeadOption  >>> {EPSILON, sr,  } 
+fParams  >>> {id, float, int, EPSILON,  } 
+statBlock  >>> {=, EPSILON,  } 
+termMod  >>> {and, *, EPSILON, /,  } 
+fParamsTailRepeat  >>> {,, EPSILON,  } 
+classDeclOption  >>> {:, EPSILON,  } 
+statement  >>> {=, EPSILON,  } 
+expr  >>> {not, floatNum, intNum, id, +, -,  } 
+term  >>> {not, floatNum, intNum, id, +, -,  } 
+relExpr  >>> {not, floatNum, intNum, id, +, -,  } 
+factor  >>> {not, floatNum, intNum, id, +, -,  } 
+addOp  >>> {or, +, -,  } 
+arraySizeRepeat  >>> {[, EPSILON,  } 
+arraySize  >>> {[,  } 
+prog  >>> {id, program, float, class, int,  } 
+variableFunctionCallFactor  >>> {id,  } 
+variable  >>> {[, EPSILON,  } 
+indiceRepeat  >>> {[, EPSILON,  } 
+classDeclOptionRepeat  >>> {,,  } 
+assignStat  >>> {id, [, =,  } 
+varDecl  >>> {id, float, int,  } 
+classDeclRepeat  >>> {class, EPSILON,  } 
+funcHead  >>> {id, float, int,  } 
