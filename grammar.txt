@@ -1,0 +1,89 @@
+prog                  -> classDeclRepeat funcDefRepeat program funcBody ;
+classDecl             -> class id classDeclOption { varDeclfuncDecl } ;
+classDeclRepeat       -> classDecl classDeclRepeat
+classDeclRepeat       -> EPSILON
+classDeclOption       -> : id classDeclOptionRepeat
+classDeclOption       -> EPSILON
+classDeclOptionRepeat -> , id classDeclOptionRepeat
+classDeclOptionRepeat -> EPSILON
+funcDefRepeat         -> funcDef funcDefRepeat
+funcDefRepeat         -> EPSILON
+funcDef               -> funcHead funcBody ;
+varDeclfuncDecl       -> typeId varDeclPre
+varDeclfuncDecl       -> EPSILON
+varDeclPre            -> arraySizeRepeat ; varDeclfuncDecl
+varDeclPre            -> funcDecl
+funcDeclRepeat        -> typeId funcDecl
+funcDeclRepeat        -> EPSILON
+funcDecl              -> ( fParams ) ; funcDeclRepeat
+varDeclRepeat         -> typeId varDecl
+varDeclRepeat         -> EPSILON
+varDecl               -> arraySizeRepeat ; varDeclRepeat
+funcHead              -> type funcHeadOptionFactor ( fParams )
+funcHeadOptionFactor  -> id funcHeadOption
+funcHeadOption        -> sr id
+funcHeadOption        -> EPSILON
+funcBody              -> { varDeclRepeat statementRepeat }
+type                  -> float
+type                  -> id
+type                  -> int
+typeId                -> float id
+typeId                -> id id
+typeId                -> int id
+statementRepeat       -> statement statementRepeat
+statementRepeat       -> EPSILON
+arraySizeRepeat       -> arraySize arraySizeRepeat
+arraySizeRepeat       -> EPSILON
+statement             -> for ( typeId assignOp expr ; relExpr ; assignStat ) statBlock ;
+statement             -> get ( idnestRepeat variable ) ;
+statement             -> if ( expr ) then statBlock else statBlock ;
+statement             -> put ( expr ) ;
+statement             -> return ( expr ) ;
+statement             -> assignStat ;
+assignStat            -> idnestRepeat variable assignOp expr
+statBlock             -> { statementRepeat }
+statBlock             -> statement
+statBlock             -> EPSILON
+expr                  -> relExpr | id
+relExpr               -> arithExpr relExprMod
+relExprMod            -> relOp arithExpr relExprMod
+relExprMod            -> EPSILON
+arithExpr             -> term arithExprMod
+arithExprMod          -> addOp term arithExpr
+arithExprMod          -> EPSILON
+sign                  -> +
+sign                  -> -
+term                  -> factor termMod
+termMod               -> multOp factor termMod
+termMod               -> EPSILON
+factor                -> ( arithExpr )
+factor                -> floatNum
+factor                -> intNum
+factor                -> variableFunctionCallFactor
+factor                -> not factor
+factor                -> sign factor
+indice                -> [ arithExpr ]
+arraySize             -> [ intNum ]
+fParams               -> typeId arraySizeRepeat fParamsTailRepeat
+fParams               -> EPSILON
+fParamsTailRepeat     -> fParamsTail fParamsTailRepeat
+fParamsTailRepeat     -> EPSILON
+aParams               -> expr aParamsTailRepeat
+aParams               -> EPSILON
+aParamsTailRepeat     -> aParamsTail aParamsTailRepeat
+aParamsTailRepeat     -> EPSILON
+fParamsTail           -> , typeId arraySizeRepeat
+aParamsTail           -> , expr
+assignOp              -> =
+relOp                 -> eq
+relOp                 -> geq
+relOp                 -> gt
+relOp                 -> leq
+relOp                 -> lt
+relOp                 -> neq
+addOp                 -> +
+addOp                 -> -
+addOp                 -> or
+multOp                -> *
+multOp                -> /
+multOp                -> and

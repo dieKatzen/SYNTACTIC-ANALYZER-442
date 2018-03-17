@@ -1,0 +1,69 @@
+//
+//
+//  REPORT AND SPECIFICATION
+//
+//
+
+Report Statements
+=========================================================================================================
+
+User Notes: Run main function in parseTable class
+
+
+Analysis
+=========================================================================================================
+- All transformations/ left-recursions/ambiguities can be found in the OverDo folder. Each file ending is number
+and sequences the changes.
+
+- My grammar still has 1 conflict. So the current one that is entered in to use is a slightly modified version
+can be inputed and found in grammar.txt
+
+
+- Most of the action happens in parseTable method. I did not have time to properly refractor it. But given the
+grammar the parseTable not only parses the given grammar, but also produces the first and follow set and the
+ll1 predicttable. All of the results of these can be found in the test result files.
+
+Design
+=========================================================================================================
+- The derivationProof.txt file needs to be deleted each time, if new results are to be updated.(Sorry)
+
+- The given table will be used to parse the given data. Currently it is
+
+class id { } ; program { } ;
+
+I didnt have time to connect my lexical analyser to my syntactic analyzer, so right now it cannot interpret
+individual tokens. Individual tokens will have to be replaced with forexample "id", as above.
+
+DerivationProof - gives full
+
+If the given grammar does not support a given string. It will print to Error.txt and state position of error.
+
+Ast Structure has only been partially implemented
+
+Test cases were manually tested
+
+Tools
+=========================================================================================================
+5) The only tool used was AtoCC for verifying the grammar. Everything else was self prepared.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tools Used
+=========================================================================================================
